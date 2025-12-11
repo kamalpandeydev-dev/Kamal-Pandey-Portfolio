@@ -1,0 +1,99 @@
+{
+  "fileName": "2.txt",
+  "section": {
+    "heading": "E-learning Projects",
+    "subtitle": "Key e-learning and content-development projects based on XML, HTML, Flash, and related technologies.",
+    "image": "/assets/eLearning.jpg",
+    "tags": [
+      "E-learning Projects",
+      "HTML / CSS",
+      "XML / Flash",
+      "Storyline",
+      "Online Learning Modules"
+    ],
+    "projects": [
+      {
+        "title": "Articulate",
+        "description": "Development using Articulate Storyline and Rise, SCORM/xAPI, and LMS integration.",
+        "roleAndResponsibilities": [
+          "Work with visual storyboards, multimedia learning assets, and LMS content integration."
+        ],
+        "technologyStack": [
+          "Articulate Storyline",
+          "Rise",
+          "SCORM",
+          "xAPI",
+          "LMS platforms"
+        ]
+      },
+      {
+        "title": "Sun Micro System – Sun Project",
+        "description": "Project based on XML/HTML, generating XML/HTML files according to defined standards and guidelines.",
+        "roleAndResponsibilities": [
+          "Generate and integrate XML/HTML files as per standards and guidelines."
+        ],
+        "technologyStack": ["XML", "HTML"]
+      },
+      {
+        "title": "Knet (Knowledge Net Studio)",
+        "description": "Thomson Netg e-learning project consisting of hierarchy/Flash elements. Role includes creating hierarchy and mapping audio and visual files.",
+        "roleAndResponsibilities": [
+          "Create hierarchy and map audio and visual files."
+        ],
+        "technologyStack": ["Flash", "Audio/Visual Mapping"]
+      },
+      {
+        "title": "TMIT",
+        "description": "Project based on XML/HTML/Flash. Involves creating XML pages as per client requirements/storyboards.",
+        "roleAndResponsibilities": [
+          "Create XML pages as per client requirements/storyboards."
+        ],
+        "technologyStack": ["XML", "HTML", "Flash"]
+      },
+      {
+        "title": "Elsevier",
+        "description": "HTML/Flash-based project. Responsible for creating pages in HTML based on client-provided storyboards.",
+        "roleAndResponsibilities": [
+          "Create pages in HTML based on client-provided storyboards."
+        ],
+        "technologyStack": ["HTML", "Flash"]
+      },
+      {
+        "title": "E-LFH",
+        "description": "Part of Giuddnti Labs LearnExact suite. Involves components such as Packager and The Lobster for e-learning for healthcare (NHS).",
+        "roleAndResponsibilities": [
+          "E-learning content development using suite components such as Packager and The Lobster."
+        ],
+        "technologyStack": [
+          "Packager",
+          "The Lobster",
+          "E-learning Suite Tools"
+        ]
+      },
+      {
+        "title": "Perkinswill",
+        "description": "Graphic creation project using Flash. Responsible for creating graphics based on storyboard requirements.",
+        "roleAndResponsibilities": [
+          "Create graphics in Flash as per storyboard."
+        ],
+        "technologyStack": ["Flash", "Graphic Design"]
+      },
+      {
+        "title": "DELL",
+        "description": "Project based on XML/HTML/Flash. Role includes creating HTML files for pages as per client requirements/storyboards.",
+        "roleAndResponsibilities": [
+          "Create HTML files for pages as per client requirements/storyboards."
+        ],
+        "technologyStack": ["XML", "HTML", "Flash"]
+      },
+      {
+        "title": "Oracle",
+        "description": "Product Developer General Ledger, Alpha Brains. Worked on generating XML pages and audio editing.",
+        "roleAndResponsibilities": [
+          "Generate XML pages and perform audio editing."
+        ],
+        "technologyStack": ["XML", "Audio Editing Tools"]
+      }
+    ]
+  }
+}

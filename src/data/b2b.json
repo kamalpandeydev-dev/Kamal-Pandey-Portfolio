@@ -1,0 +1,198 @@
+{
+  "fileName": "b2b.json",
+  "projects": [
+    {
+      "title": "PepsiCo Snacks.com",
+      "image": "/assets/snacksCom.png",
+      "links": ["https://www.snacks.com/"],
+      "description": "PepsiCo, Inc. is an American multinational food, snack, and beverage corporation. PepsiCo's business encompasses all aspects of the food and beverage market, including manufacturing, distribution, and marketing of its products.",
+      "roleAndResponsibilities": [
+        "Responsible for UI/Frontend development.",
+        "Handling the UI development and code implementation in ReactJS."
+      ],
+      "technologyStack": [
+        "HTML",
+        "SCSS",
+        "MUI",
+        "ADA validation",
+        "Emailer development",
+        "Web Optimization"
+      ],
+      "tags": ["ReactJS", "E-commerce", "Accessibility"]
+    },
+    {
+      "title": "PepsiCo – EQPLUS",
+      "image": "/assets/epop.jpg",
+      "description": "ePOP/EQPLUS is an internal PepsiCo application used to sell equipment to various units within the PepsiCo organization.",
+      "roleAndResponsibilities": [
+        "Responsible for UI/Frontend development.",
+        "Handling the UI development and code implementation in ReactJS."
+      ],
+      "technologyStack": [
+        "HTML",
+        "SCSS",
+        "React Bootstrap",
+        "Web Optimization",
+        "Figma",
+        "Responsive Design"
+      ],
+      "tags": ["ReactJS", "Internal Tool", "React Bootstrap"]
+    },
+    {
+      "title": "PepsiCo Snackstoyoucanada",
+      "image": "/assets/snacks2you.png",
+      "links": ["https://shop.snackstoyoucanada.ca/home"],
+      "description": "PepsiCo, Inc. is an American multinational food, snack, and beverage corporation.",
+      "roleAndResponsibilities": [
+        "Responsible for UI/Frontend development.",
+        "Handling the UI development and code implementation in ReactJS."
+      ],
+      "technologyStack": [
+        "HTML",
+        "SCSS",
+        "MUI",
+        "ADA validation",
+        "Emailer development",
+        "Web Optimization"
+      ],
+      "tags": ["ReactJS", "Accessibility", "Emailers"]
+    },
+    {
+      "title": "Continental / LPE Project",
+      "image": "/assets/continental.jpg",
+      "description": "Continental LPE is a catalogue generation project for Continental Tyre's domain. Catalogues are generated for different regions based on different templates.",
+      "roleAndResponsibilities": [
+        "Responsible for UI development for the catalogue.",
+        "Handling UI implementation in PDFreactor."
+      ],
+      "technologyStack": ["HTML", "CSS", "Print Media", "PDFreactor"],
+      "tags": ["Catalogue Generation", "Print Media", "Tyre Domain"]
+    },
+    {
+      "title": "Nielsen Brand Bank",
+      "image": "/assets/nbb.jpg",
+      "description": "Nielsen Brandbank is a world-leading provider of product content for e-commerce sites and merchandising.",
+      "roleAndResponsibilities": [
+        "Responsible for UI/Frontend development.",
+        "Handling UI development and implementation for the application."
+      ],
+      "technologyStack": ["HTML", "CSS", "ADA validation", "Web Optimization", "Adobe XD"],
+      "tags": ["Product Content", "E-commerce", "Accessibility"]
+    },
+    {
+      "title": "Sony",
+      "image": "/assets/b2bB2c.png",
+      "description": "Sony PIM system is used for product enrichment and publishing enrichment of product information from multiple channels.",
+      "roleAndResponsibilities": [
+        "Responsible for UI development for PDF generation in Pimcore.",
+        "Handling UI development for PDF generation in Pimcore."
+      ],
+      "technologyStack": ["HTML", "CSS", "Print Media", "wkhtmltopdf"],
+      "tags": ["PIM", "PDF Generation"]
+    },
+    {
+      "title": "Northgate Market",
+      "image": "/assets/northgatemarket.jpg",
+      "links": ["https://www.northgategiftcard.com/"],
+      "description": "Sony PIM system is used for product enrichment and publishing enrichment of product information from multiple channels.",
+      "roleAndResponsibilities": ["Responsible for UI/Frontend development."],
+      "technologyStack": ["HTML", "CSS", "JS", "GIT"],
+      "tags": ["E-commerce"]
+    },
+    {
+      "title": "Multi-client B2B & B2C Applications",
+      "image": "/assets/b2bB2c.png",
+      "description": "Includes projects like Butler Supply, Carlsberg, PepsiCo Smart Shelf, Pipelife, Franklin & Young, Alshaya, CASA (Continental), etc.",
+      "roleAndResponsibilities": [
+        "Responsible for UI development and support.",
+        "Handling UI implementation for various applications."
+      ],
+      "technologyStack": ["HTML", "CSS", "JavaScript", "jQuery", "Web Optimization"],
+      "tags": ["B2B", "B2C", "Web Applications"]
+    },
+    {
+      "title": "Dabur Real Fruit Power",
+      "image": "/assets/realfruitpower.jpg",
+      "links": ["https://www.realfruitpower.com/"],
+      "description": "Consumer-facing site with parallax animations and interactive experiences.",
+      "roleAndResponsibilities": [
+        "Developed UI layouts from PSD/storyboards.",
+        "Implemented responsive layouts.",
+        "Maintained HTML/CSS/JS in .NET environment.",
+        "Designed UI assets.",
+        "Implemented jQuery and CSS animations."
+      ],
+      "technologyStack": ["HTML5", "CSS3", "JavaScript", "jQuery", "Parallax", "Photoshop", "Bootstrap"],
+      "tags": ["Digital Website", "Web Design & Front-end"]
+    },
+    {
+      "title": "Dabur Honey",
+      "image": "/assets/daburhoney.webp",
+      "links": ["https://www.daburhoney.com/"],
+      "description": "Corporate product website under Dabur's digital ecosystem.",
+      "roleAndResponsibilities": [
+        "Developed layouts from storyboards.",
+        "Implemented responsiveness.",
+        "UI/UX design.",
+        "Integrated front-end into .NET.",
+        "Created banners and icons."
+      ],
+      "technologyStack": ["HTML5", "CSS3", "JavaScript", "jQuery", "Responsive Design", "Photoshop"],
+      "tags": ["Digital Website", "Web Design & Front-end"]
+    },
+    {
+      "title": "Dabur Real Activ",
+      "image": "/assets/realactiv.jpg",
+      "links": ["https://www.realactiv.com"],
+      "description": "Consumer-facing product site with responsive UI and animations.",
+      "roleAndResponsibilities": [
+        "Developed UI layouts.",
+        "Implemented responsive screens.",
+        "Performed HTML, CSS, JS updates.",
+        "Designed banners and graphics."
+      ],
+      "technologyStack": ["HTML5", "CSS3", "JavaScript", "Photoshop", "Responsive Design", "Bootstrap"],
+      "tags": ["Digital Website", "Web Design & Front-end"]
+    },
+    {
+      "title": "Dabur Odomos Protect",
+      "image": "/assets/odomosprotect.jpg",
+      "links": ["https://www.odomosprotect.com/"],
+      "description": "Marketing website for Odomos with responsive and animated UI.",
+      "roleAndResponsibilities": [
+        "Created responsive pages.",
+        "Edited HTML, CSS, JS in .NET.",
+        "Built UI components.",
+        "Designed banners and icons."
+      ],
+      "technologyStack": ["HTML5", "CSS3", "JS", "jQuery", "Responsive Design", ".NET", "Photoshop"],
+      "tags": ["Digital Website", "Web Design & Front-end"]
+    },
+    {
+      "title": "Dabur Chyawanprash",
+      "image": "/assets/daburchyawanprash.png",
+      "links": ["https://www.daburchyawanprash.com/"],
+      "description": "Promotional website with heavy jQuery animation.",
+      "roleAndResponsibilities": [
+        "Created animated UI experiences.",
+        "Built responsive screens.",
+        "Designed UI graphics."
+      ],
+      "technologyStack": ["HTML5", "CSS3", "JavaScript", "jQuery", "Animations", "Photoshop"],
+      "tags": ["Digital Website", "Web Design & Front-end"]
+    },
+    {
+      "title": "Hoodaki",
+      "image": "/assets/hoodaki.jpg",
+      "links": ["https://www.hoodaki.com/"],
+      "description": "Commercial booking/travel platform with responsive UI.",
+      "roleAndResponsibilities": [
+        "Front-end UI development.",
+        "Created UI components.",
+        "Ensured responsive design."
+      ],
+      "technologyStack": ["HTML", "CSS", "JavaScript", "Photoshop", "Flash"],
+      "tags": ["Digital Website", "Flash Animations"]
+    }
+  ]
+}
