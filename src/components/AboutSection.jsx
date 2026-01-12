@@ -7,7 +7,6 @@ const AboutSection = () => (
         className="about container"
         aria-labelledby="about-heading"
       >
-        <h2 id="about-heading">About Me</h2>
         <div className="about-grid">
           <img
             className="portrait"
@@ -15,6 +14,28 @@ const AboutSection = () => (
             alt="Portrait of Kamal Pandey"
           />
           <div className="about-text">
+            <section id="home" aria-labelledby="hero-heading">
+        <p className="lead">
+          Senior UI/UX Designer & Accessibility Frontend Developer - Inclusive
+          Design • WCAG 2.1 AA/AAA
+        </p>
+        <p className="lead">
+          Delhi, India • +91 9266306689 • 
+          <a href="mailto:kamalpandey.dev@gmail.com"
+            >kamalpandey.dev@gmail.com</a
+          > • 
+          <a
+                href="https://www.linkedin.com/in/kamal-pandey-0a69b7387/"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              > • 
+          <a href="https://kamalpandey.dev" target="_blank" rel="noopener"
+                >Portfolio</a
+              >
+
+        </p>
+      </section>
             <p>
               <strong>Professional Summary</strong><br />
               Senior UI/UX Designer & Frontend Developer with 14+ years of
@@ -31,19 +52,7 @@ const AboutSection = () => (
               violations by 85% and improved task completion by 28%.
             </p>
 
-            <p>
-              <strong>Links</strong>:
-              <a href="https://kamalpandey.dev" target="_blank" rel="noopener"
-                >Portfolio</a
-              >
-              •
-              <a
-                href="https://www.linkedin.com/in/kamal-pandey-0a69b7387/"
-                target="_blank"
-                rel="noopener"
-                >LinkedIn</a
-              >
-            </p>
+            
           </div>
         </div>
       </section>

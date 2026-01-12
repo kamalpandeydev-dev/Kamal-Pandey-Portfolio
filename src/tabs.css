@@ -1,0 +1,283 @@
+/* --------------------------
+   Corporate Tabs — Responsive Layouts
+   MOBILE: 2-col grid
+   TABLET: 3-col grid
+   DESKTOP: centered horizontal row (no scroll)
+   Clean • Corporate • Accessible
+-------------------------- */
+
+:root {
+  /* Palette */
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --muted-ink: #6b7280;
+  --text: #111827;
+  --accent: #2a9d8f;
+  --accent-contrast: #ffffff;
+  --border: rgba(17,24,39,0.08);
+  --focus: rgba(42,157,143,0.22);
+  --shadow: 0 10px 28px rgba(16,24,40,0.06);
+
+  /* Geometry & type */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --pad: 20px;
+  --gap-xs: 10px;
+  --gap-sm: 12px;
+  --gap-md: 16px;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  --size-base: clamp(0.95rem, 1vw + 0.3rem, 1rem);
+  --size-sm: 0.88rem;
+
+  --control-height: 46px;
+  --transition-fast: 180ms ease;
+  --transition-medium: 300ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* -------------------------------------------------
+   Base container and accessibility helpers
+   ------------------------------------------------- */
+.tabs-container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-sans);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.tab-list {
+  margin: 0 0 16px 0;
+  box-sizing: border-box;
+  display: grid;                /* default -> mobile grid */
+  gap: var(--gap-sm);
+  align-items: stretch;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default list styling if tabs are list items */
+.tab-list[role="tablist"] {
+  padding: 0;
+}
+
+/* -------------------------
+   Tab buttons (common)
+   ------------------------- */
+.tab,
+.tab-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-height);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted-ink);
+  font-weight: 600;
+  font-size: var(--size-sm);
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%; /* ensures full-width in grid mode (mobile/tablet) */
+}
+
+/* subtle hover lift (not for selected) */
+.tab:hover:not([aria-selected="true"]),
+.tab-button:hover:not([aria-selected="true"]) {
+  background: rgba(0,0,0,0.02);
+  transform: translateY(-1px);
+}
+
+/* active tab */
+.tab[aria-selected="true"],
+.tab-button[aria-selected="true"],
+.tab-active,
+.tab--active {
+  background: linear-gradient(180deg, var(--accent) 0%, color-mix(in srgb, var(--accent), black 6%) 100%);
+  color: var(--accent-contrast);
+  border-color: transparent;
+  box-shadow: 0 10px 28px rgba(42,157,143,0.14);
+  transform: translateY(-2px);
+}
+
+/* disabled state */
+.tab[aria-disabled="true"],
+.tab-button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+/* focus-visible for keyboard users */
+.tab:focus-visible,
+.tab-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 5px var(--focus);
+  border-color: color-mix(in srgb, var(--accent), black 12%);
+}
+
+/* Panels wrapper */
+.tab-panels { margin-top: 12px; }
+
+/* Panel style */
+.tab-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--pad);
+  box-shadow: var(--shadow);
+  animation: panelIn var(--transition-fast);
+  box-sizing: border-box;
+}
+
+/* Hide non-active panel */
+.tab-panel[hidden] { display: none; }
+
+/* Header hierarchy inside panels */
+.tab-panel h1,
+.tab-panel h2,
+.tab-panel h3 {
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tab-panel p { color: var(--muted-ink); line-height: 1.6; }
+
+/* Animation */
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------------------
+   MOBILE: <= 639px
+   - 2-col grid
+   - full-width tiles, stacked rows
+   ------------------------------------------------- */
+@media (max-width: 639px) {
+  .tab-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-xs);
+  }
+
+  .tab, .tab-button {
+    width: 100%;
+    padding: 10px 12px;
+    min-height: 46px;
+    font-size: 0.86rem;
+  }
+
+  .tab-panel { padding: 16px; }
+}
+
+/* -------------------------------------------------
+   TABLET: 640px - 1023px
+   - 3-col grid
+   - full-width tiles in each column
+   ------------------------------------------------- */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .tab-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-sm);
+  }
+
+  .tab, .tab-button {
+    width: 100%;
+    padding: 11px 14px;
+    min-height: 48px;
+    font-size: 0.9rem;
+  }
+
+  .tab-panel { padding: 18px; }
+}
+
+/* -------------------------------------------------
+   DESKTOP: >= 1024px
+   - center-aligned horizontal row of tabs (no scrolling)
+   - tabs become inline with auto-width (not forced to full width)
+   - wrap gracefully into multiple centered rows if many tabs
+   ------------------------------------------------- */
+@media (min-width: 1024px) {
+  /* Make tab-list a flex container centered horizontally.
+     Allow wrapping so long lines will wrap to a centered new row. */
+  .tab-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* center tabs horizontally */
+    align-items: center;
+    flex-wrap: wrap;         /* allow wrapping but keep centered */
+    gap: var(--gap-md);
+    padding: 6px 0;
+  }
+
+  /* Tab buttons revert to auto width to size to content */
+  .tab, .tab-button {
+    width: auto;             /* not forced to full column width */
+    min-width: 120px;
+    padding: 12px 20px;
+    font-size: var(--size-sm);
+    line-height: 1;
+  }
+
+  /* Slightly larger panel padding on desktop */
+  .tab-panel { padding: 24px; }
+}
+
+/* ----------------------------------------------------------------
+   OPTIONAL: wide-desktop spacing tweak for very large screens
+   ---------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .tabs-container { max-width: 1280px; margin-top: 1rem; }
+  .tab-list { gap: 20px; }
+  .tab { min-width: 140px; padding: 14px 22px; }
+}
+
+/* -------------------------------------------------
+   Reduced motion preference
+   ------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* -------------------------------------------------
+   Utilities (optional)
+   - variant classes to modify behavior if you need them
+   ------------------------------------------------- */
+/* boxed container */
+.tabs-container--boxed .tab-panel {
+  background: var(--surface);
+  border-radius: calc(var(--radius-md) - 2px);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+/* compact variant */
+.tabs-container--compact .tab, .tabs-container--compact .tab-button {
+  padding: 8px 12px;
+  min-height: 40px;
+  font-size: 0.84rem;
+}
+
+/* full-bleed panels (no internal card) */
+.tabs-container--fullbleed .tab-panel {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: calc(var(--pad) - 6px);
+}

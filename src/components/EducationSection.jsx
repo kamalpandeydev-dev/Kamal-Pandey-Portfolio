@@ -7,6 +7,8 @@ const EducationSection = () => (
         className="education container"
         aria-labelledby="education-heading"
       >
+                <h2 className="projects-heading">Qualifications</h2>
+
         <h2 id="education-heading">Education & Certifications</h2>
         <div className="edu">
           <h3>Bachelor of Computer Applications (BCA)</h3>

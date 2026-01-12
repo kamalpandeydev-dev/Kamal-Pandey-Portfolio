@@ -7,7 +7,7 @@
   --accent: #111827;
   --container: 1100px;
   --font-family: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Poppins', sans-serif;
   --bg-page: #f5f5f7;
   --bg-card: #ffffff;
   --border-subtle: #e0e0e0;
@@ -45,6 +45,7 @@ body, p, li, span {
 }
 .site-header {
   background-color: #374151;
+  margin-bottom: 2rem;
 }
 .header-inner {
   display: flex;
@@ -304,9 +305,9 @@ h1 {
   align-items: start;
 }
 .portrait {
-  width: 220px;
+  width: 196px;
   height:  auto;
-  /* max-height: 250px; */
+  margin-top: 1rem;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -401,6 +402,9 @@ h1 {
   color: var(--accent);
   border: 1px solid #bbdefb;
   white-space: nowrap;
+}
+.lead a{
+  margin: 0 10px;
 }
 /* Responsive */
 @media (max-width: 900px) {

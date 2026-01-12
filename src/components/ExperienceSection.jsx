@@ -7,7 +7,7 @@ const ExperienceSection = () => (
         className="experience container"
         aria-labelledby="experience-heading"
       >
-        <h2 id="experience-heading">Professional Experience</h2>
+        <h2 className="projects-heading">Professional Experience</h2>
 
         <div className="job">
           <h3>

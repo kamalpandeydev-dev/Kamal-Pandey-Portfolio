@@ -16,7 +16,7 @@ const ContactSection = () => (
           >
         </p>
         <p className="phone">
-          Phone: <a href="tel:+919266306689">+91 92663 06689</a>
+          Phone: <a href="tel:+919266306689">+91 9266306689</a>
         </p>
       </section>
 );
