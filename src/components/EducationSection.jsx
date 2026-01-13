@@ -19,9 +19,9 @@ const EducationSection = () => (
 
           <h3>Professional Affiliations</h3>
           <ul>
+            <li>Responsive Web Design & Mobile-First Development</li>
             <li>Web Accessibility Specialist — IAAP</li>
             <li>WCAG 2.1 & Accessibility Compliance Training</li>
-            <li>Responsive Web Design & Mobile-First Design</li>
           </ul>
         </div>
       </section>
