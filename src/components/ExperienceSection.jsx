@@ -17,7 +17,7 @@ const ExperienceSection = () => (
           Designed and developed accessible UI interfaces using React.js and SCSS, Figma Design System with accessibility.
         </li>
         <li>
-          <a href="https://sookti.ai/" target="_blank" alt="Sookti Ai">Sookti AI/</a> | <a href="https://crazyeggz.in/about-us/" target="_blank" alt="Crazyeggz">Crazyeggz</a> | <a href="https://www.pratualsolar.com/about" target="_blank" alt="Pratual Solar Power">Pratual Solar Power</a>
+          <a href="https://sookti.ai/" target="_blank" alt="Sookti Ai">Sookti AI</a> | <a href="https://crazyeggz.in/about-us/" target="_blank" alt="Crazyeggz">Crazyeggz</a> | <a href="https://www.pratualsolar.com/about" target="_blank" alt="Pratual Solar Power">Pratual Solar Power</a>
         </li>
       </ul>
     </div>
