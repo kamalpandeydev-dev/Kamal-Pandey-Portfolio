@@ -9,15 +9,15 @@ const ExperienceSection = () => (
     <h2 className="projects-heading">Professional Experience</h2>
 <div className="job">
       <h3>
-        Freelance UI/UX Designer & Frontend Developer For Sookti AI | Crazyeggz | Pratual Solar Power| 
+        Freelance UI/UX Designer & Frontend Developer
       </h3>
-      <p className="job-meta">Delhi/NCR, India | May 2025 – Present</p>
+      <p className="job-meta">Delhi/NCR, India | May 2025 - Present</p>
       <ul>
         <li>
           Designed and developed accessible UI interfaces using React.js and SCSS, Figma Design System with accessibility.
         </li>
         <li>
-          https://sookti.ai/ | https://crazyeggz.in/about-us/ | https://www.pratualsolar.com/about
+          <a href="https://sookti.ai/" target="_blank" alt="Sookti Ai">https://Sookti AI/</a> | <a href="https://crazyeggz.in/about-us/" target="_blank" alt="Crazyeggz">Crazyeggz</a> | <a href="https://www.pratualsolar.com/about" target="_blank" alt="Pratual Solar Power">Pratual Solar Power</a>
         </li>
       </ul>
     </div>
