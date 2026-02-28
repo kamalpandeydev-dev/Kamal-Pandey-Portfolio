@@ -7,7 +7,20 @@ const ExperienceSection = () => (
     aria-labelledby="experience-heading"
   >
     <h2 className="projects-heading">Professional Experience</h2>
-
+<div className="job">
+      <h3>
+        Freelance UI/UX Designer & Frontend Developer For Sookti AI | Crazyeggz | Pratual Solar Power| 
+      </h3>
+      <p className="job-meta">Delhi/NCR, India | May 2025 – Present</p>
+      <ul>
+        <li>
+          Designed and developed accessible UI interfaces using React.js and SCSS, Figma Design System with accessibility.
+        </li>
+        <li>
+          https://sookti.ai/ | https://crazyeggz.in/about-us/ | https://www.pratualsolar.com/about
+        </li>
+      </ul>
+    </div>
     <div className="job">
       <h3>
         Senior UI/UX Designer & Frontend Developer — Happiest Minds Technologies
