@@ -16,26 +16,8 @@ const caseStudies = [
       { metric: '95+', detail: 'Lighthouse accessibility scores' },
       { metric: '35%', detail: 'Faster design review cycles' },
     ],
-    tags: ['WCAG 2.1', 'Design Systems', 'Figma', 'ARIA', 'DesignOps', 'Accessibility Audit', 'A/B Testing'],
+    tags: ['WCAG 2.1', 'ADA', 'Design Systems', 'Figma', 'ARIA', 'DesignOps', 'Accessibility Audit', 'A/B Testing'],
     color: '#c9a84c',
-    featured: true,
-  },
-  {
-    id: 'dabur-digital',
-    label: 'Dabur India Ltd — Consumer Brand Ecosystem',
-    type: 'Product Design · Frontend · Web Performance',
-    year: '2013–2018',
-    headline: 'Designing a 50M+/Month Consumer Digital Ecosystem',
-    description:
-      'Designed and developed 4 flagship brand websites (RealFruitPower.com, DaburDentalCare.com, DaburHoney.com, DaburChyawanprash.com) serving over 50 million monthly users across 8+ device form factors. Executed Lighthouse and PageSpeed audits to drive conversion improvements.',
-    outcomes: [
-      { metric: '50M+', detail: 'Monthly users across brand properties' },
-      { metric: '8+', detail: 'Device form factors supported' },
-      { metric: '4', detail: 'Flagship brand sites delivered' },
-      { metric: 'Reduced', detail: 'Bounce rates via performance optimization' },
-    ],
-    tags: ['Consumer UX', 'Responsive Design', 'Web Performance', 'Page Speed', 'Pattern Libraries'],
-    color: '#7c9e6e',
     featured: true,
   },
   {
@@ -55,6 +37,24 @@ const caseStudies = [
     tags: ['React.js', 'Redux', 'SCSS', 'Usability Testing', 'Design Tokens', 'User Research'],
     color: '#6b8cba',
     featured: false,
+  },
+  {
+    id: 'dabur-digital',
+    label: 'Dabur India Ltd — Consumer Brand Ecosystem',
+    type: 'Product Design · Frontend · Web Performance',
+    year: '2013-2018',
+    headline: 'Designing a 50M+/Month Consumer Digital Ecosystem',
+    description:
+      'Designed and developed 4 flagship brand websites (RealFruitPower.com, DaburDentalCare.com, DaburHoney.com, DaburChyawanprash.com) serving over 50 million monthly users across 8+ device form factors. Executed Lighthouse and PageSpeed audits to drive conversion improvements.',
+    outcomes: [
+      { metric: '50M+', detail: 'Monthly users across brand properties' },
+      { metric: '8+', detail: 'Device form factors supported' },
+      { metric: '4', detail: 'Flagship brand sites delivered' },
+      { metric: 'Reduced', detail: 'Bounce rates via performance optimization' },
+    ],
+    tags: ['Consumer UX', 'Responsive Design', 'Web Performance', 'Page Speed', 'Pattern Libraries'],
+    color: '#7c9e6e',
+    featured: true,
   },
   {
     id: 'freelance-ai',

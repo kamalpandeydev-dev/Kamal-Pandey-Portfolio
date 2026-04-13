@@ -52,7 +52,7 @@ const Navbar = () => {
         >
           {/* Badge */}
           <span className="hero__badge-dot" aria-hidden="true"></span>
-          Available for Opportunity
+          Hire Me
         </a>
  
         {/* Mobile menu toggle */}
@@ -89,7 +89,7 @@ const Navbar = () => {
               className="navbar__mobile-cta"
               onClick={handleNavClick}
             >
-              Available for Work
+              Hire Me
             </a>
           </li>
         </ul>
