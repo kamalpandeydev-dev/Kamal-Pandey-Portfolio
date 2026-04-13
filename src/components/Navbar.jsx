@@ -34,7 +34,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop links */}
-        <ul className="navbar__links" role="list">
+        <ul className="navbar__links">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <a href={href} className="navbar__link">
@@ -75,7 +75,7 @@ const Navbar = () => {
         className={`navbar__mobile ${menuOpen ? 'navbar__mobile--open' : ''}`}
         aria-hidden={!menuOpen}
       >
-        <ul role="list">
+        <ul>
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <a href={href} className="navbar__mobile-link" onClick={handleNavClick}>

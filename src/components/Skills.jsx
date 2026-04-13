@@ -130,9 +130,9 @@ const Skills = () => (
       {/* Tool logos strip */}
       <div className="skills__tools" aria-label="Tools and platforms">
         <div className="skills__tools-label">Tools &amp; Platforms</div>
-        <ul className="skills__tools-list" role="list">
+        <ul className="skills__tools-list">
           {toolLogos.map((t) => (
-            <li key={t.name} className="skills__tool-chip" role="listitem">
+            <li key={t.name} className="skills__tool-chip">
               <span aria-hidden="true">{t.emoji}</span>
               {t.name}
             </li>

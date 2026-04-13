@@ -142,7 +142,7 @@ const Experience = () => (
                 </div>
               )}
 
-              <ul className="timeline__tags" aria-label="Skills used" role="list">
+              <ul className="timeline__tags" aria-label="Skills used">
                 {exp.tags.map((t) => (
                   <li key={t} className="timeline__tag">{t}</li>
                 ))}

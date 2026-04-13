@@ -77,7 +77,7 @@ const caseStudies = [
 ];
 
 const Work = () => {
-  const [active, setActive] = useState(null);
+  const [active] = useState(null);
 
   return (
     <section id="work" className="work" aria-labelledby="work-heading">
