@@ -94,13 +94,13 @@
 
 .skill-item__note {
   font-size: 0.75rem;
-  color: var(--color-text-subtle);
+  color: var(--color-gold);
   text-align: right;
   font-family: var(--font-mono);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 55%;
+  max-width: 68%;
 }
 
 .skill-item__bar {

@@ -1,26 +1,46 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => (
   <footer className="footer" role="contentinfo">
     <div className="footer__inner">
       <div className="footer__brand">
         <div className="footer__logo" aria-hidden="true">
-          <span className="footer__logo-kp">KP</span>
+          <span className="footer__logo-kp">
+            <img
+              src="./assets/kplogo3.jpg"
+              alt="Kamal Pandey Logo and top skills"
+            />
+          </span>
         </div>
         <div className="footer__brand-text">
           <span className="footer__name">Kamal Pandey</span>
-          <span className="footer__title">Lead UX Designer · Design Systems Architect · Accessibility Specialist</span>
+          <span className="footer__title">
+            Lead UX Designer · Design Systems Architect · Accessibility
+            Specialist
+          </span>
         </div>
       </div>
 
       <nav className="footer__nav" aria-label="Footer navigation">
-        <a href="#about" className="footer__link">About</a>
-        <a href="#work" className="footer__link">Work</a>
-        <a href="#skills" className="footer__link">Skills</a>
-        <a href="#experience" className="footer__link">Experience</a>
-        <a href="#companies" className="footer__link">Clients</a>
-        <a href="#contact" className="footer__link">Contact</a>
+        <a href="#about" className="footer__link">
+          About
+        </a>
+        <a href="#work" className="footer__link">
+          Work
+        </a>
+        <a href="#skills" className="footer__link">
+          Skills
+        </a>
+        <a href="#experience" className="footer__link">
+          Experience
+        </a>
+        <a href="#companies" className="footer__link">
+          Clients
+        </a>
+        <a href="#contact" className="footer__link">
+          Contact
+        </a>
         <a
           href="https://www.linkedin.com/in/kamal-pandey-0a69b7387/"
           target="_blank"
@@ -37,8 +57,23 @@ const Footer = () => (
           © {new Date().getFullYear()} Kamal Pandey. All rights reserved.
         </p>
         <div className="footer__tags" aria-label="Expertise keywords">
-          {['Lead UX Designer', 'Design Systems', 'WCAG 2.2', 'Figma', 'React.js', 'Next.js', 'Accessibility', 'DesignOps', 'User Research', 'A/B Testing', 'Enterprise UX', 'B2B · B2C'].map(tag => (
-            <span key={tag} className="footer__tag">{tag}</span>
+          {[
+            "Lead UX Designer",
+            "Design Systems",
+            "WCAG 2.2",
+            "Figma",
+            "React.js",
+            "Next.js",
+            "Accessibility",
+            "DesignOps",
+            "User Research",
+            "A/B Testing",
+            "Enterprise UX",
+            "B2B · B2C",
+          ].map((tag) => (
+            <span key={tag} className="footer__tag">
+              {tag}
+            </span>
           ))}
         </div>
         {/* <p className="footer__wcag">

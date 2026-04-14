@@ -65,18 +65,20 @@ const experiences = [
     tags: ['Consumer UX', 'Brand Web', 'Performance', 'Responsive Design', 'Adobe Creative Suite', 'Sharepoint', 'Newsletter/Emailer'],
   },
   {
+    
     role: 'Earlier Career',
     company: 'Multiple Organizations',
     location: 'India',
     period: '2007-2013',
     current: false,
-    description: <>'Freelance Web & Graphic Designer · Web Developer at <strong>Moretimer Pvt Ltd</strong> · E-Learning Product Developer at <strong>Infopro India</strong> (Oracle Global E-Learning Platform — SCORM/xAPI, Articulate Storyline, Captivate)'</>,
+    description: <>Freelance Web & Graphic Designer · Web Developer at <strong>Moretimer Pvt Ltd</strong> · E-Learning Product Developer at <strong>Infopro India</strong> (<strong>Oracle</strong> Global E-Learning Platform — SCORM/xAPI, Articulate Storyline/Rise, Captivate)</>,
+    
     highlights: [
-      'Oracle Global E-Learning Platform — served Oracle\'s international user base',
+      <><strong>Oracle Global E-Learning</strong> Platform — served Oracle\'s international user base</>,
       'Articulate Storyline, Captivate, SCORM/xAPI, LMS development',
     ],
     tags: ['E-Learning', 'Web Design', 'Freelance'],
-    condensed: true,
+    condensed: false,
   },
 ];
 

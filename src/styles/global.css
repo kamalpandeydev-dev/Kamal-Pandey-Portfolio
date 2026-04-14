@@ -27,7 +27,7 @@
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
   --font-mono: 'DM Mono', 'Courier New', monospace;
-
+  
   /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -49,9 +49,11 @@
   --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
   --duration-fast: 200ms;
   --duration-base: 350ms;
-  --duration-slow: 600ms;
+  --duration-slow: 600ms; 
+  --d-flex: flex;
+  --gap-1: 1rem;
 }
-
+ 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

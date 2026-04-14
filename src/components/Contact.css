@@ -115,7 +115,7 @@
   font-family: var(--font-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
 }
 
 .contact-card__value {

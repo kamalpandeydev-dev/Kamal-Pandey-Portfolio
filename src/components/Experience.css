@@ -157,7 +157,7 @@
 .timeline__period {
   font-size: 0.8125rem;
   font-family: var(--font-mono);
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
   letter-spacing: 0.03em;
 }
 

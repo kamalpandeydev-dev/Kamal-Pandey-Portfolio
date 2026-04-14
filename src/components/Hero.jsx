@@ -40,7 +40,7 @@ const Hero = () => {
           {/* Descriptor */}
           <p className="hero__descriptor">
             14+ years crafting accessible, high-performance digital products for
-            Fortune 500 B2B &amp; B2C. Expert in <strong>Figma Design Systems</strong>,{" "}
+            Fortune B2B &amp; B2C. Expert in <strong>Figma Design Systems</strong>,{" "}
             <strong>WCAG 2.1/2.2 Compliance</strong>,{" "}
             <strong>React.js Frontend Engineering</strong>, and{" "}
             <strong>Product Design Strategy</strong> — trusted by Accenture, Dabur India, Oracle &amp; Happiest Minds.
