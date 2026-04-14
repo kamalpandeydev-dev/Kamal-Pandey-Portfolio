@@ -40,9 +40,9 @@ const skillGroups = [
       </svg>
     ),
     skills: [
-      { name: 'React.js', level: 88, note: 'Component Libraries, Hooks, State Management' },
+      { name: 'React.js / Next.js', level: 88, note: 'Component Libraries, Hooks, App Router' },
       { name: 'HTML5 / Semantic HTML', level: 97, note: 'Accessibility-First Markup' },
-      { name: 'CSS3 / SCSS', level: 95, note: 'Design Tokens, Responsive Layouts' },
+      { name: 'CSS3 / SCSS / Tailwind', level: 95, note: 'Design Tokens, Responsive Layouts' },
       { name: 'JavaScript (ES6+)', level: 82, note: 'DOM Interaction, A11y Events' },
       { name: 'Git / VS Code', level: 85, note: 'Version Control, Dev Collaboration' },
     ],
@@ -67,15 +67,18 @@ const skillGroups = [
 
 const toolLogos = [
   { name: 'Figma', emoji: '🎨' },
-  { name: 'React', emoji: '⚛️' },
-  { name: 'WCAG', emoji: '♿' },
-  { name: 'Axe', emoji: '🔍' },
+  { name: 'React.js', emoji: '⚛️' },
+  // { name: 'Next.js', emoji: '▲' },
+  { name: 'WCAG 2.2', emoji: '♿' },
+  { name: 'Axe DevTools', emoji: '🔍' },
   { name: 'Adobe XD', emoji: '📐' },
-  { name: 'JAWS', emoji: '🖥️' },
+  { name: 'JAWS / NVDA', emoji: '🖥️' },
   { name: 'Jira', emoji: '📋' },
-  { name: 'Notion', emoji: '📓' },
-  { name: 'Maze', emoji: '🧪' },
+  // { name: 'Notion', emoji: '📓' },
+  // { name: 'Maze', emoji: '🧪' },
   { name: 'Git', emoji: '🔀' },
+  { name: 'Material UI', emoji: '🧪' },
+  { name: 'Tailwind CSS', emoji: '💨' },
 ];
 
 const Skills = () => (
@@ -87,8 +90,9 @@ const Skills = () => (
         Expertise &amp; Toolstack
       </h2>
       <p className="skills__subheading">
-        A full-spectrum skill set spanning product design, accessibility engineering,
-        front-end development, and UX research.
+        A full-spectrum skill set spanning product design, WCAG accessibility engineering,
+        React.js front-end development, Figma Design Systems, and strategic UX research —
+        deployable across enterprise B2B and high-traffic B2C environments.
       </p>
 
       <div className="skills__grid">

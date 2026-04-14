@@ -19,6 +19,7 @@ const Footer = () => (
         <a href="#work" className="footer__link">Work</a>
         <a href="#skills" className="footer__link">Skills</a>
         <a href="#experience" className="footer__link">Experience</a>
+        <a href="#companies" className="footer__link">Clients</a>
         <a href="#contact" className="footer__link">Contact</a>
         <a
           href="https://www.linkedin.com/in/kamal-pandey-0a69b7387/"
@@ -36,7 +37,7 @@ const Footer = () => (
           © {new Date().getFullYear()} Kamal Pandey. All rights reserved.
         </p>
         <div className="footer__tags" aria-label="Expertise keywords">
-          {['Product Design', 'Design Systems', 'WCAG 2.2', 'Figma', 'React', 'User Research', 'A/B Testing', 'Accessibility'].map(tag => (
+          {['Lead UX Designer', 'Design Systems', 'WCAG 2.2', 'Figma', 'React.js', 'Next.js', 'Accessibility', 'DesignOps', 'User Research', 'A/B Testing', 'Enterprise UX', 'B2B · B2C'].map(tag => (
             <span key={tag} className="footer__tag">{tag}</span>
           ))}
         </div>

@@ -40,9 +40,10 @@ const Hero = () => {
           {/* Descriptor */}
           <p className="hero__descriptor">
             14+ years crafting accessible, high-performance digital products for
-            B2B &amp; B2C. Expert in <strong>Figma Design Systems</strong>,{" "}
-            <strong>WCAG 2.2 Compliance</strong>, and{" "}
-            <strong>Product Design Strategy</strong>.
+            Fortune 500 B2B &amp; B2C. Expert in <strong>Figma Design Systems</strong>,{" "}
+            <strong>WCAG 2.1/2.2 Compliance</strong>,{" "}
+            <strong>React.js Frontend Engineering</strong>, and{" "}
+            <strong>Product Design Strategy</strong> — trusted by Accenture, Dabur India, Oracle &amp; Happiest Minds.
           </p>
 
           {/* Stats row */}
@@ -84,9 +85,9 @@ const Hero = () => {
             <a
               href="#work"
               className="btn btn--primary"
-              aria-label="View Kamal's case studies and work"
+              aria-label="View Kamal's UX case studies"
             >
-              View My Work
+              View Case Studies
               <svg
                 width="16"
                 height="16"
@@ -104,6 +105,16 @@ const Hero = () => {
                 />
               </svg>
             </a>
+            {/* <a
+              href="#contact"
+              className="btn btn--ghost hero__btn-resume"
+              aria-label="Download Kamal Pandey's resume"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download Resume
+            </a> */}
             <a
               href="mailto:kamalpandey.dev@gmail.com"
               className="btn btn--ghost"
@@ -212,7 +223,7 @@ const Hero = () => {
             Figma Expert
           </div>
           <div className="hero__chip hero__chip--5" role="presentation">
-            User Research
+            UI Development
           </div>
         </div>
       </div>

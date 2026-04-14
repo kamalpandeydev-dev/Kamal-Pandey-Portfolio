@@ -8,6 +8,7 @@ import Work from './components/Work';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import Companies from './components/Companies';
 import Footer from './components/Footer';
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         <Work />
         <Skills />
         <Experience />
+        <Companies />
         <Contact />
       </main>
 

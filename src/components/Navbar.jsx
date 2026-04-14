@@ -16,6 +16,7 @@ const Navbar = () => {
     { href: '#work', label: 'Work' },
     { href: '#skills', label: 'Skills' },
     { href: '#experience', label: 'Experience' },
+    { href: '#companies', label: 'Clients' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -53,6 +54,18 @@ const Navbar = () => {
           {/* Badge */}
           <span className="hero__badge-dot" aria-hidden="true"></span>
           Hire Me
+        </a>
+
+        <a
+          href="/assets/Kamal_Pandey_UX_UI_Designer.pdf"
+          target='blank'
+          className="navbar__resume-btn"
+          aria-label="Download Kamal Pandey's resume"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Resume
         </a>
  
         {/* Mobile menu toggle */}

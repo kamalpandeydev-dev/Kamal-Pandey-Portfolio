@@ -1,0 +1,241 @@
+/* ===================================================
+   COMPANIES — Clients & Employers Section
+   =================================================== */
+
+.companies {
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.companies::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0.3;
+}
+
+/* ---- Intro ---- */
+.companies__intro {
+  max-width: 640px;
+  margin-bottom: var(--space-xl);
+}
+
+.companies__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.companies__heading em {
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.companies__subheading {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ---- Grid ---- */
+.companies__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: var(--space-xl);
+}
+
+/* ---- Company Card ---- */
+.company-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--card-bg);
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+  pointer-events: none;
+}
+
+.company-card:hover {
+  border-color: var(--card-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.company-card:hover::before {
+  opacity: 1;
+}
+
+/* ---- Logo Badge ---- */
+.company-card__logo {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--card-bg, rgba(201,168,76,0.1));
+  border: 1px solid var(--card-accent, var(--color-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.company-card__initials {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--card-accent, var(--color-gold));
+  letter-spacing: 0.04em;
+}
+
+/* ---- Body ---- */
+.company-card__body {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.company-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.company-card__role {
+  font-size: 0.82rem;
+  color: var(--card-accent, var(--color-gold));
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.company-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.company-card__sector {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  background: var(--color-bg-3);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+}
+
+.company-card__period {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono);
+}
+
+.company-card__highlight {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.company-card__highlight-icon {
+  color: var(--card-accent, var(--color-gold));
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+}
+
+/* ---- Trust Banner ---- */
+.companies__trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-2);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.companies__trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.companies__trust-num {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.companies__trust-label {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.companies__trust-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border-2);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .companies {
+    padding: var(--space-2xl) 0;
+  }
+
+  .companies__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .companies__trust {
+    gap: 1.5rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .companies__trust-divider {
+    display: none;
+  }
+}

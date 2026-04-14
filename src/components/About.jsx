@@ -11,13 +11,14 @@ const About = () => {
           <div className="about__content">
             <h2 id="about-heading" className="about__heading">
               I architect digital experiences that{' '}
-              <em>perform</em> and <em>include</em>.
+              <em>perform</em>, <em>include</em>, and <em>convert</em>.
             </h2>
 
             <p className="about__lead">
-              With 14+ years at the intersection of design, accessibility, and
-              front-end engineering, I bring a rare combination of creative
-              direction and technical execution to every project.
+              With 14+ years at the intersection of UX design, accessibility engineering, and
+              front-end development, I bring a rare combination of creative direction and
+              technical execution — trusted by Accenture, Dabur India, Oracle, and
+              Happiest Minds Technologies.
             </p>
 
             <p className="about__body">

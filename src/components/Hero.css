@@ -389,7 +389,7 @@
 }
 .hero__chip--5 {
   top: 50%;
-  left: -40px;
+  left: -50px;
   transform: translateY(-50%);
   animation-delay: 1.2s;
 }
@@ -527,4 +527,11 @@
     width: 260px;
     height: 260px;
   }
+}
+
+/* Resume button in hero actions */
+.hero__btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
