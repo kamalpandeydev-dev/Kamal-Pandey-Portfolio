@@ -31,7 +31,7 @@ const Navbar = () => {
         <a href="#hero" className="navbar__logo" aria-label="Kamal Pandey Portfolio - home">
           {/* <span className="navbar__logo-kp" aria-hidden="true">KP</span>
           <span className="navbar__logo-name">Kamal Pandey</span> */}
-          <img src="/assets/kamal-pandey.jpg" className='navbar__logo-kp' alt='Portfolio Logo Kamal Pandey' />
+          <img src="/assets/kamal-pandey.jpg" className='navbar__logo-kp' alt='Portfolio Logo Kamal Pandey'  />
         </a>
 
         {/* Desktop links */}
