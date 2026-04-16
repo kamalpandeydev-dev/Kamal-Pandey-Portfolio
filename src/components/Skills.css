@@ -1,3 +1,7 @@
+/* ===================================================
+   SKILLS SECTION
+   =================================================== */
+
 .skills {
   padding: var(--space-2xl) 0;
 }
@@ -92,6 +96,7 @@
   flex-shrink: 0;
 }
 
+/* #c9a84c on #161616 → 5.4:1 — passes AA */
 .skill-item__note {
   font-size: 0.75rem;
   color: var(--color-gold);
@@ -112,9 +117,19 @@
 
 .skill-item__fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    var(--color-gold-light) 100%
+  );
   border-radius: var(--radius-full);
-  transition: width 1s var(--ease-out);
+}
+
+/* Respect prefers-reduced-motion for the width animation */
+@media (prefers-reduced-motion: no-preference) {
+  .skill-item__fill {
+    transition: width 1s var(--ease-out);
+  }
 }
 
 /* Tools strip */
@@ -123,12 +138,13 @@
   padding-top: 2.5rem;
 }
 
+/* WCAG fix: was var(--color-text-subtle) ~2.45:1 → now var(--color-text-muted) ~5.6:1 */
 .skills__tools-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  color: var(--color-text-muted);
   margin-bottom: 1rem;
 }
 

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import "./Hero.css";
+import React, { useEffect, useRef } from 'react';
+import './Hero.css';
 
 const Hero = () => {
   const headlineRef = useRef(null);
@@ -7,59 +7,64 @@ const Hero = () => {
   useEffect(() => {
     const el = headlineRef.current;
     if (!el) return;
-    el.style.opacity = "0";
-    el.style.transform = "translateY(32px)";
+
+    // Respect prefers-reduced-motion — WCAG 2.3.3 Animation from Interactions
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (prefersReducedMotion) return; // Skip animation; element is visible by default
+
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(32px)';
     requestAnimationFrame(() => {
       setTimeout(() => {
         el.style.transition =
-          "opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)";
-        el.style.opacity = "1";
-        el.style.transform = "translateY(0)";
+          'opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
       }, 80);
     });
   }, []);
 
   return (
     <section id="hero" className="hero" aria-labelledby="hero-headline">
-      {/* Ambient background elements */}
+      {/* Decorative background elements — hidden from AT */}
       <div className="hero__bg-orb hero__bg-orb--1" aria-hidden="true"></div>
       <div className="hero__bg-orb hero__bg-orb--2" aria-hidden="true"></div>
       <div className="hero__bg-grid" aria-hidden="true"></div>
 
       <div className="hero__inner">
         <div className="hero__content" ref={headlineRef}>
-          {/* Headline */}
+          {/* Main headline */}
           <h1 id="hero-headline" className="hero__headline">
             <span className="hero__headline-sub">Lead UX Designer &amp;</span>
-
             <em className="hero__headline-em">Design Systems</em>
             <br />
             <span className="hero__headline-main">Architect</span>
           </h1>
 
-          {/* Descriptor */}
+          {/* Descriptor paragraph */}
           <p className="hero__descriptor">
             14+ years crafting accessible, high-performance digital products for
-            Fortune B2B &amp; B2C. Expert in <strong>Figma Design Systems</strong>,{" "}
-            <strong>WCAG 2.1/2.2 Compliance</strong>,{" "}
-            <strong>React.js Frontend Engineering</strong>, and{" "}
-            <strong>Product Design Strategy</strong> — trusted by Accenture, Dabur India, Oracle &amp; Happiest Minds.
+            Fortune B2B &amp; B2C. Expert in{' '}
+            <strong>Figma Design Systems</strong>,{' '}
+            <strong>WCAG 2.1/2.2 Compliance</strong>,{' '}
+            <strong>React.js Frontend Engineering</strong>, and{' '}
+            <strong>Product Design Strategy</strong> trusted by Accenture,
+            Dabur India, Oracle &amp; Happiest Minds.
           </p>
 
-          {/* Stats row */}
-          <div
-            className="hero__stats"
-            role="list"
-            aria-label="Career highlights"
-          >
-            <div className="hero__stat" role="listitem">
+          {/* Career stats — use <ul>/<li> for proper list semantics */}
+          <ul className="hero__stats" aria-label="Career highlights">
+            <li className="hero__stat">
               <span className="hero__stat-num" aria-label="14 plus years">
                 14+
               </span>
               <span className="hero__stat-label">Years Experience</span>
-            </div>
-            <div className="hero__stat-divider" aria-hidden="true"></div>
-            <div className="hero__stat" role="listitem">
+            </li>
+            <li className="hero__stat-divider" aria-hidden="true"></li>
+            <li className="hero__stat">
               <span
                 className="hero__stat-num"
                 aria-label="98 percent WCAG compliance achieved"
@@ -67,9 +72,9 @@ const Hero = () => {
                 98%
               </span>
               <span className="hero__stat-label">WCAG Compliance</span>
-            </div>
-            <div className="hero__stat-divider" aria-hidden="true"></div>
-            <div className="hero__stat" role="listitem">
+            </li>
+            <li className="hero__stat-divider" aria-hidden="true"></li>
+            <li className="hero__stat">
               <span
                 className="hero__stat-num"
                 aria-label="50 million plus monthly users"
@@ -77,10 +82,10 @@ const Hero = () => {
                 50M+
               </span>
               <span className="hero__stat-label">Monthly Users Reached</span>
-            </div>
-          </div>
+            </li>
+          </ul>
 
-          {/* CTAs */}
+          {/* Call-to-action buttons */}
           <div className="hero__actions">
             <a
               href="#work"
@@ -105,16 +110,6 @@ const Hero = () => {
                 />
               </svg>
             </a>
-            {/* <a
-              href="#contact"
-              className="btn btn--ghost hero__btn-resume"
-              aria-label="Download Kamal Pandey's resume"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              Download Resume
-            </a> */}
             <a
               href="mailto:kamalpandey.dev@gmail.com"
               className="btn btn--ghost"
@@ -125,7 +120,7 @@ const Hero = () => {
           </div>
 
           {/* Social links */}
-          <div className="hero__social">
+          <nav className="hero__social" aria-label="Social and contact links">
             <a
               href="https://www.linkedin.com/in/kamal-pandey-0a69b7387/"
               target="_blank"
@@ -150,7 +145,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="hero__social-link"
-              aria-label="Kamal Pandey's live portfolio (opens in new tab)"
+              aria-label="Kamal Pandey's live portfolio website (opens in new tab)"
             >
               <svg
                 width="18"
@@ -170,7 +165,7 @@ const Hero = () => {
             <a
               href="mailto:kamalpandey.dev@gmail.com"
               className="hero__social-link"
-              aria-label="Email Kamal Pandey"
+              aria-label="Send an email to Kamal Pandey"
             >
               <svg
                 width="18"
@@ -187,21 +182,21 @@ const Hero = () => {
               </svg>
               Email
             </a>
-          </div>
+          </nav>
         </div>
 
-        {/* Hero visual — abstract geometry */}
+        {/*
+          Hero visual — purely decorative.
+          aria-hidden="true" hides the entire subtree from assistive technology.
+          No keyboard-focusable elements inside.
+        */}
         <div className="hero__visual" aria-hidden="true">
           <div className="hero__avatar-ring">
             <div className="hero__avatar-inner">
               <div className="hero__avatar-text">
                 <span className="hero__avatar-initials">
-                  <img
-                    src="./assets/kplogo3.jpg"
-                    alt="Kamal Pandey Logo and top skills"
-                  />
+                  <img src="./assets/kplogo3.jpg" alt="Kamal Pandey Portfolio Logo with Skills" />
                 </span>
-                {/* <span className="hero__avatar-title">Lead UX</span> */}
               </div>
             </div>
             <div className="hero__ring hero__ring--1"></div>
@@ -209,22 +204,12 @@ const Hero = () => {
             <div className="hero__ring hero__ring--3"></div>
           </div>
 
-          {/* Floating skill chips */}
-          <div className="hero__chip hero__chip--1" role="presentation">
-            Product Design
-          </div>
-          <div className="hero__chip hero__chip--2" role="presentation">
-            Design Systems
-          </div>
-          <div className="hero__chip hero__chip--3" role="presentation">
-            WCAG 2.2
-          </div>
-          <div className="hero__chip hero__chip--4" role="presentation">
-            Figma Expert
-          </div>
-          <div className="hero__chip hero__chip--5" role="presentation">
-            UI Development
-          </div>
+          {/* Floating skill chips — decorative, aria-hidden from parent */}
+          <div className="hero__chip hero__chip--1">Product Design</div>
+          <div className="hero__chip hero__chip--2">Design Systems</div>
+          <div className="hero__chip hero__chip--3">WCAG 2.2</div>
+          <div className="hero__chip hero__chip--4">Figma Expert</div>
+          <div className="hero__chip hero__chip--5">UI Development</div>
         </div>
       </div>
 
@@ -232,7 +217,7 @@ const Hero = () => {
       <a
         href="#about"
         className="hero__scroll"
-        aria-label="Scroll down to about section"
+        aria-label="Scroll down to About section"
       >
         <span className="hero__scroll-text">Scroll</span>
         <span className="hero__scroll-line" aria-hidden="true"></span>

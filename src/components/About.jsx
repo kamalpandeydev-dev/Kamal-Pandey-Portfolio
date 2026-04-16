@@ -15,10 +15,10 @@ const About = () => {
             </h2>
 
             <p className="about__lead">
-              With 14+ years at the intersection of UX design, accessibility engineering, and
-              front-end development, I bring a rare combination of creative direction and
-              technical execution — trusted by Accenture, Dabur India, Oracle, and
-              Happiest Minds Technologies.
+              With 14+ years at the intersection of UX design, accessibility
+              engineering, and front-end development, I bring a rare combination
+              of creative direction and technical execution — trusted by
+              Accenture, Dabur India, Oracle, and Happiest Minds Technologies.
             </p>
 
             <p className="about__body">
@@ -32,14 +32,18 @@ const About = () => {
             <p className="about__body">
               My practice blends <strong>Design Ops workflows</strong>,{' '}
               <strong>Figma Design System</strong> architecture, and{' '}
-              <strong>ARIA-first front-end development</strong> — turning
-              complex business requirements into elegant, human-centered
-              solutions.
+              <strong>ARIA-first front-end development</strong> — turning complex
+              business requirements into elegant, human-centered solutions.
             </p>
 
             <div className="about__affiliations">
-              <span className="about__affil-label">Professional Affiliations:</span>
-              <ul className="about__affil-list" aria-label="Professional affiliations">
+              <span className="about__affil-label" id="affil-label">
+                Professional Affiliations:
+              </span>
+              <ul
+                className="about__affil-list"
+                aria-labelledby="affil-label"
+              >
                 <li>IAAP — Accessibility Professionals</li>
                 <li>IxDA — Interaction Design Association</li>
                 <li>UXPA — User Experience Professionals</li>
@@ -52,10 +56,20 @@ const About = () => {
             {/* Certifications */}
             <div className="about__card" aria-labelledby="cert-heading">
               <h3 id="cert-heading" className="about__card-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
-                  <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <circle cx="12" cy="8" r="6" />
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
                 </svg>
-                CERTIFICATIONS & PROFESSIONAL TRAINING
+                Certifications &amp; Professional Training
               </h3>
               <ul className="about__cert-list">
                 <li>
@@ -76,31 +90,55 @@ const About = () => {
             {/* Key metrics */}
             <div className="about__metrics" aria-labelledby="metrics-heading">
               <h3 id="metrics-heading" className="about__card-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                 </svg>
                 Impact Numbers
               </h3>
-              <div className="about__metrics-grid" role="list">
+              <dl className="about__metrics-grid">
                 {[
                   { num: '85%', label: 'Reduction in accessibility violations' },
                   { num: '42%', label: 'Core Web Vitals improvement' },
                   { num: '35%', label: 'Faster design review cycles' },
                   { num: '67%', label: 'Drop in accessibility support tickets' },
                 ].map(({ num, label }) => (
-                  <div key={label} className="about__metric-item" role="listitem">
-                    <span className="about__metric-num" aria-label={num}>{num}</span>
-                    <span className="about__metric-label">{label}</span>
+                  <div key={label} className="about__metric-item">
+                    <dt className="about__metric-label">{label}</dt>
+                    <dd
+                      className="about__metric-num"
+                      aria-label={`${num} — ${label}`}
+                    >
+                      {num}
+                    </dd>
                   </div>
                 ))}
-              </div>
+              </dl>
             </div>
 
             {/* Education */}
             <div className="about__card" aria-labelledby="edu-heading">
               <h3 id="edu-heading" className="about__card-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
                 </svg>
                 Education
               </h3>

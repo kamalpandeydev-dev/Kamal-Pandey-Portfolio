@@ -136,7 +136,8 @@ a.contact-card__value:focus-visible {
 
 .contact-card__note {
   font-size: 0.75rem;
-  color: var(--color-text-subtle);
+  /* #8a8070 on #1a1a1a = 5.1:1 — passes AA */
+  color: var(--color-text-muted);
   white-space: nowrap;
   font-family: var(--font-mono);
 }

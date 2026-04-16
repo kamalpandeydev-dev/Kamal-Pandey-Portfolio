@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import "./Contact.css";
+import React, { useState } from 'react';
+import './Contact.css';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("kamalpandey.dev@gmail.com").then(() => {
+    navigator.clipboard.writeText('kamalpandey.dev@gmail.com').then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
@@ -14,21 +14,18 @@ const Contact = () => {
   return (
     <section id="contact" className="contact" aria-labelledby="contact-heading">
       <div className="section-inner">
-        <div className="section-label" aria-hidden="true">
-          06 / Contact
-        </div>
+        <div className="section-label" aria-hidden="true">06 / Contact</div>
 
         <div className="contact__grid">
-          {/* Left: Headline + CTA */}
+          {/* Left: Headline + CTAs */}
           <div className="contact__content">
             <h2 id="contact-heading" className="contact__heading">
-              Let's build something
-              <em> exceptional</em>.
+              Let's build something<em> exceptional</em>.
             </h2>
             <p className="contact__lead">
               I'm currently open to full-time, contract, and advisory
-              opportunities in <strong>Product Design</strong>,{" "}
-              <strong>Design Systems</strong>, and{" "}
+              opportunities in <strong>Product Design</strong>,{' '}
+              <strong>Design Systems</strong>, and{' '}
               <strong>Accessibility Engineering</strong>.
             </p>
             <p className="contact__body">
@@ -41,7 +38,7 @@ const Contact = () => {
               <a
                 href="mailto:kamalpandey.dev@gmail.com"
                 className="btn btn--primary"
-                aria-label="Email Kamal at kamalpandey.dev@gmail.com"
+                aria-label="Send an email to Kamal at kamalpandey.dev@gmail.com"
               >
                 Send Message
                 <svg
@@ -60,9 +57,10 @@ const Contact = () => {
               </a>
               <a
                 href="/assets/Kamal_Pandey_UX_UI_Designer.pdf"
-                target="blank"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn--ghost"
-                aria-label="Request Kamal's resume via email"
+                aria-label="Download Kamal's resume PDF (opens in new tab)"
               >
                 <svg
                   width="15"
@@ -85,14 +83,14 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn--ghost"
-                aria-label="Connect with Kamal on LinkedIn (opens in new tab)"
+                aria-label="View Kamal's LinkedIn profile (opens in new tab)"
               >
                 LinkedIn Profile
               </a>
             </div>
           </div>
 
-          {/* Right: Contact cards */}
+          {/* Right: Contact detail cards */}
           <div className="contact__cards" aria-label="Contact details">
             {/* Email card */}
             <div className="contact-card" aria-label="Email contact">
@@ -125,9 +123,10 @@ const Contact = () => {
                 onClick={handleCopyEmail}
                 aria-label={
                   copied
-                    ? "Email address copied to clipboard"
-                    : "Copy email address to clipboard"
+                    ? 'Email address copied to clipboard'
+                    : 'Copy email address to clipboard'
                 }
+                aria-live="polite"
               >
                 {copied ? (
                   <svg
@@ -158,7 +157,7 @@ const Contact = () => {
                   </svg>
                 )}
                 <span className="contact-card__copy-label">
-                  {copied ? "Copied!" : "Copy"}
+                  {copied ? 'Copied!' : 'Copy'}
                 </span>
               </button>
             </div>
@@ -237,19 +236,17 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-card__value"
-                  aria-label="Kamal Pandey's LinkedIn profile (opens in new tab)"
+                  aria-label="Kamal Pandey on LinkedIn (opens in new tab)"
                 >
                   kamal-pandey-0a69b7387
                 </a>
               </div>
-              <span className="contact-card__arrow" aria-hidden="true">
-                ↗
-              </span>
+              <span className="contact-card__arrow" aria-hidden="true">↗</span>
             </div>
           </div>
         </div>
 
-        {/* Availability status bar */}
+        {/* Availability status — role="status" + aria-live for live region */}
         <div
           className="contact__status"
           role="status"

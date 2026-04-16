@@ -12,9 +12,19 @@ import Companies from './components/Companies';
 import Footer from './components/Footer';
 
 function App() {
-  // Animate sections into view on scroll
   useEffect(() => {
     const sections = document.querySelectorAll('section');
+
+    // Respect prefers-reduced-motion — WCAG 2.3.3 Animation from Interactions
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (prefersReducedMotion) {
+      // Skip animation entirely — make all sections immediately visible
+      sections.forEach((s) => s.classList.add('section--visible'));
+      return;
+    }
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -37,8 +47,10 @@ function App() {
 
   return (
     <>
-      {/* Skip navigation for screen readers — WCAG 2.4.1 */}
-      <a href="#main-content" className="skip-link">Skip to main content</a>
+      {/* Skip navigation for screen readers — WCAG 2.4.1 Bypass Blocks */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
 
       <Navbar />
 
@@ -54,7 +66,6 @@ function App() {
 
       <Footer />
 
-      {/* Back to top */}
       <BackToTop />
     </>
   );
@@ -68,6 +79,11 @@ function BackToTop() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // Respect prefers-reduced-motion for the transition
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   return (
     <a
@@ -92,21 +108,32 @@ function BackToTop() {
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? 'auto' : 'none',
         transform: visible ? 'translateY(0)' : 'translateY(8px)',
-        transition: 'opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, color 0.2s ease',
+        transition: prefersReducedMotion
+          ? 'none'
+          : 'opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, color 0.2s ease',
       }}
-      onMouseEnter={e => {
+      onMouseEnter={(e) => {
         e.currentTarget.style.background = 'var(--color-gold-pale)';
         e.currentTarget.style.color = 'var(--color-gold-light)';
         e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)';
       }}
-      onMouseLeave={e => {
+      onMouseLeave={(e) => {
         e.currentTarget.style.background = 'var(--color-surface)';
         e.currentTarget.style.color = 'var(--color-text-muted)';
         e.currentTarget.style.borderColor = 'var(--color-border-2)';
       }}
     >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
-        <polyline points="18 15 12 9 6 15"/>
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <polyline points="18 15 12 9 6 15" />
       </svg>
     </a>
   );

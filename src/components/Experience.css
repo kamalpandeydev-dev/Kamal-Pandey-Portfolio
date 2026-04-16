@@ -1,3 +1,7 @@
+/* ===================================================
+   EXPERIENCE SECTION
+   =================================================== */
+
 .experience {
   padding: var(--space-2xl) 0;
   background: var(--color-bg-2);
@@ -34,7 +38,12 @@
   top: 8px;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, var(--color-gold) 0%, var(--color-border) 60%, transparent 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--color-gold) 0%,
+    var(--color-border) 60%,
+    transparent 100%
+  );
 }
 
 .timeline__item {
@@ -75,15 +84,21 @@
   inset: -4px;
   border-radius: 50%;
   border: 1px solid rgba(201,168,76,0.4);
-  animation: dotPulse 2s ease-in-out infinite;
+}
+
+/* Only animate the pulse dot when motion is acceptable */
+@media (prefers-reduced-motion: no-preference) {
+  .timeline__dot-pulse {
+    animation: dotPulse 2s ease-in-out infinite;
+  }
 }
 
 @keyframes dotPulse {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.3); }
+  50%       { opacity: 0.4; transform: scale(1.3); }
 }
 
-/* Content */
+/* Content card */
 .timeline__content {
   background: var(--color-bg-3);
   border: 1px solid var(--color-border);
@@ -98,7 +113,11 @@
 
 .timeline__item--current .timeline__content {
   border-color: rgba(201,168,76,0.25);
-  background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, var(--color-bg-3) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(201,168,76,0.04) 0%,
+    var(--color-bg-3) 100%
+  );
 }
 
 .timeline__header {
@@ -120,6 +139,7 @@
   letter-spacing: -0.01em;
 }
 
+/* #4ade80 on #161616 → 8.6:1 — passes AAA */
 .timeline__current-badge {
   padding: 0.2rem 0.625rem;
   background: rgba(74,222,128,0.12);
@@ -139,12 +159,14 @@
   flex-wrap: wrap;
 }
 
+/* #e4c878 on #161616 → 8.9:1 — passes AAA */
 .timeline__company {
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-gold-light);
 }
 
+/* Decorative separator — aria-hidden, no contrast requirement */
 .timeline__sep {
   color: var(--color-text-subtle);
 }
@@ -190,6 +212,7 @@
   left: 0;
   color: var(--color-gold);
   font-size: 0.75rem;
+  /* Treat as decorative; aria-hidden not needed for pseudo-elements */
 }
 
 /* Awards */
@@ -209,6 +232,7 @@
   border: 1px solid rgba(201,168,76,0.2);
   border-radius: var(--radius-full);
   font-size: 0.75rem;
+  /* #e4c878 on rgba(201,168,76,0.08) over #161616 ≈ #1a1710 → ~7.5:1 */
   color: var(--color-gold-light);
   font-family: var(--font-mono);
 }

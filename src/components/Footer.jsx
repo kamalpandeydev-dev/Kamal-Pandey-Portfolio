@@ -1,52 +1,61 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
+
+const footerLinks = [
+  { href: '#about',      label: 'About' },
+  { href: '#work',       label: 'Work' },
+  { href: '#skills',     label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#companies',  label: 'Clients' },
+  { href: '#contact',    label: 'Contact' },
+];
+
+const expertiseTags = [
+  'Lead UX Designer',
+  'Design Systems',
+  'WCAG 2.2',
+  'Figma',
+  'React.js',
+  'Next.js',
+  'Accessibility',
+  'DesignOps',
+  'User Research',
+  'A/B Testing',
+  'Enterprise UX',
+  'B2B · B2C',
+];
 
 const Footer = () => (
-  <footer className="footer" role="contentinfo">
+  /* <footer> carries the implicit contentinfo landmark — role="contentinfo" is redundant */
+  <footer className="footer">
     <div className="footer__inner">
       <div className="footer__brand">
+        {/* Logo — purely decorative, aria-hidden */}
         <div className="footer__logo" aria-hidden="true">
           <span className="footer__logo-kp">
-            <img
-              src="./assets/kplogo3.jpg"
-              alt="Kamal Pandey Logo and top skills"
-            />
+            <img src="./assets/kplogo3.jpg" alt="Kamal Pandey Portfolio Logo with Skills" />
           </span>
         </div>
         <div className="footer__brand-text">
           <span className="footer__name">Kamal Pandey</span>
           <span className="footer__title">
-            Lead UX Designer · Design Systems Architect · Accessibility
-            Specialist
+            Lead UX Designer · Design Systems Architect · Accessibility Specialist
           </span>
         </div>
       </div>
 
       <nav className="footer__nav" aria-label="Footer navigation">
-        <a href="#about" className="footer__link">
-          About
-        </a>
-        <a href="#work" className="footer__link">
-          Work
-        </a>
-        <a href="#skills" className="footer__link">
-          Skills
-        </a>
-        <a href="#experience" className="footer__link">
-          Experience
-        </a>
-        <a href="#companies" className="footer__link">
-          Clients
-        </a>
-        <a href="#contact" className="footer__link">
-          Contact
-        </a>
+        {footerLinks.map(({ href, label }) => (
+          <a key={href} href={href} className="footer__link">
+            {label}
+          </a>
+        ))}
         <a
           href="https://www.linkedin.com/in/kamal-pandey-0a69b7387/"
           target="_blank"
           rel="noopener noreferrer"
           className="footer__link"
-          aria-label="LinkedIn (opens in new tab)"
+          aria-label="LinkedIn profile (opens in new tab)"
         >
           LinkedIn ↗
         </a>
@@ -54,34 +63,18 @@ const Footer = () => (
 
       <div className="footer__bottom">
         <p className="footer__copyright">
-          © {new Date().getFullYear()} Kamal Pandey. All rights reserved.
+          <span aria-label={`Copyright ${new Date().getFullYear()} Kamal Pandey. All rights reserved.`}>
+            &copy; {new Date().getFullYear()} Kamal Pandey. All rights reserved.
+          </span>
         </p>
-        <div className="footer__tags" aria-label="Expertise keywords">
-          {[
-            "Lead UX Designer",
-            "Design Systems",
-            "WCAG 2.2",
-            "Figma",
-            "React.js",
-            "Next.js",
-            "Accessibility",
-            "DesignOps",
-            "User Research",
-            "A/B Testing",
-            "Enterprise UX",
-            "B2B · B2C",
-          ].map((tag) => (
-            <span key={tag} className="footer__tag">
+        {/* Expertise keyword tags — aria-label on container provides context */}
+        <ul className="footer__tags" aria-label="Expertise keywords">
+          {expertiseTags.map((tag) => (
+            <li key={tag} className="footer__tag">
               {tag}
-            </span>
+            </li>
           ))}
-        </div>
-        {/* <p className="footer__wcag">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" focusable="false">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-          </svg>
-          WCAG 2.2 Level AA Compliant
-        </p> */}
+        </ul>
       </div>
     </div>
   </footer>

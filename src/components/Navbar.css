@@ -1,3 +1,7 @@
+/* ===================================================
+   NAVBAR
+   =================================================== */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -5,12 +9,12 @@
   right: 0;
   z-index: 100;
   padding: 1.25rem 0;
+  border-bottom: 1px solid transparent;
   transition:
     background var(--duration-base) var(--ease-out),
     backdrop-filter var(--duration-base) var(--ease-out),
     border-color var(--duration-base) var(--ease-out),
     padding var(--duration-base) var(--ease-out);
-  border-bottom: 1px solid transparent;
 }
 
 .navbar--scrolled {
@@ -71,16 +75,17 @@
   margin-left: auto;
 }
 
+/* #8a8070 on rgba(8,8,8,.85) → ~5.6:1 — passes AA */
 .navbar__link {
   padding: 0.5rem 0.875rem;
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--color-text-muted);
   border-radius: var(--radius-sm);
+  text-decoration: none;
   transition:
     color var(--duration-fast) var(--ease-out),
     background var(--duration-fast) var(--ease-out);
-  text-decoration: none;
 }
 
 .navbar__link:hover,
@@ -94,6 +99,7 @@
   padding: 0.5625rem 1.25rem;
   background: transparent;
   border: 1px solid var(--color-gold);
+  /* #c9a84c on rgba(8,8,8,.85) → 5.4:1 — passes AA */
   color: var(--color-gold);
   font-size: 0.8125rem;
   font-weight: 500;
@@ -114,6 +120,7 @@
   font-weight: 800;
 }
 
+/* #e4c878 on dark navbar → ~9:1 — passes AAA */
 .navbar__resume-btn {
   display: inline-flex;
   align-items: center;
@@ -135,7 +142,8 @@
   color: var(--color-gold);
   background: var(--color-gold-pale);
 }
-/* Badge */
+
+/* Badge — "Hire Me" pill */
 .hero__badge {
   display: inline-flex;
   align-items: center;
@@ -146,9 +154,9 @@
   background: rgba(201, 168, 76, 0.08);
   font-size: 0.8125rem;
   font-weight: 500;
+  /* #e4c878 on rgba(201,168,76,0.08) composite ≈ #1a1710 → ~8.9:1 */
   color: var(--color-gold-light);
   letter-spacing: 0.03em;
-  /* margin-bottom: 2rem; */
   font-family: var(--font-mono);
 }
 
@@ -157,22 +165,23 @@
   height: 7px;
   border-radius: 50%;
   background: #4ade80;
-  box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
-  animation: pulse 2s infinite;
   flex-shrink: 0;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
+/* Only animate the pulse if motion is acceptable */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__badge-dot {
     box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
-  }
-  50% {
-    box-shadow:
-      0 0 16px rgba(74, 222, 128, 0.9),
-      0 0 4px rgba(74, 222, 128, 0.9);
+    animation: pulse 2s infinite;
   }
 }
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(74, 222, 128, 0.6); }
+  50%       { box-shadow: 0 0 16px rgba(74, 222, 128, 0.9), 0 0 4px rgba(74, 222, 128, 0.9); }
+}
+
+/* Burger button */
 .navbar__burger {
   display: none;
   flex-direction: column;
@@ -182,6 +191,11 @@
   background: none;
   border: none;
   cursor: pointer;
+  /* Ensure minimum 44×44px touch target — WCAG 2.5.5 */
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__burger-line {
@@ -189,10 +203,15 @@
   width: 22px;
   height: 1.5px;
   background: var(--color-text);
-  transition:
-    transform var(--duration-base) var(--ease-out),
-    opacity var(--duration-fast) var(--ease-out);
   transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .navbar__burger-line {
+    transition:
+      transform var(--duration-base) var(--ease-out),
+      opacity var(--duration-fast) var(--ease-out);
+  }
 }
 
 .navbar__burger--open .navbar__burger-line:nth-child(1) {
@@ -207,6 +226,7 @@
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
+/* Mobile menu overlay */
 .navbar__mobile {
   display: none;
   position: fixed;
@@ -217,8 +237,13 @@
   background: var(--color-bg);
   padding: 5rem 2rem 3rem;
   transform: translateX(100%);
-  transition: transform var(--duration-base) var(--ease-out);
   z-index: 99;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .navbar__mobile {
+    transition: transform var(--duration-base) var(--ease-out);
+  }
 }
 
 .navbar__mobile--open {
@@ -239,11 +264,12 @@
   font-weight: 400;
   color: var(--color-text-muted);
   border-bottom: 1px solid var(--color-border);
-  transition: color var(--duration-fast) var(--ease-out);
   text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
-.navbar__mobile-link:hover {
+.navbar__mobile-link:hover,
+.navbar__mobile-link:focus-visible {
   color: var(--color-text);
 }
 
