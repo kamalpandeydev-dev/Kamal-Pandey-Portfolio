@@ -52,7 +52,7 @@ const About = () => {
           </div>
 
           {/* Credentials column */}
-          <aside className="about__aside" aria-label="Credentials and highlights">
+          <div className="about__aside" aria-label="Credentials and highlights">
             {/* Certifications */}
             <div className="about__card" aria-labelledby="cert-heading">
               <h3 id="cert-heading" className="about__card-title">
@@ -153,7 +153,7 @@ const About = () => {
                 </li>
               </ul>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
