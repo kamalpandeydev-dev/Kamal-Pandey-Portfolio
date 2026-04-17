@@ -282,7 +282,7 @@ const Work = () => {
         </ul>
 
         {/* CTA banner */}
-        <aside className="work__cta-banner" aria-label="Work inquiry">
+        <div className="work__cta-banner" aria-label="Work inquiry">
           <div className="work__cta-content">
             <h3>Looking for a Lead UX Designer?</h3>
             <p>
@@ -314,7 +314,7 @@ const Work = () => {
               />
             </svg>
           </a>
-        </aside>
+        </div>
       </div>
     </section>
   );
