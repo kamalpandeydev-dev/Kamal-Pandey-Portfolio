@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="hero__content" ref={headlineRef}>
           {/* Main headline */}
           <h1 id="hero-headline" className="hero__headline">
-            <span className="hero__headline-sub">Lead UX UI Designer &amp;</span>
+            <span className="hero__headline-sub">Lead UX Designer &amp;</span>
             <em className="hero__headline-em">Design Systems</em>
             <br />
             <span className="hero__headline-main">Architect</span>

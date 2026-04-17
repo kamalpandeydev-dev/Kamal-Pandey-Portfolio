@@ -75,7 +75,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop navigation links */}
-        <ul className="navbar__links" role="list">
+        <ul className="navbar__links">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <a href={href} className="navbar__link">
@@ -152,7 +152,7 @@ const Navbar = () => {
         aria-label="Navigation menu"
         aria-modal="true"
       >
-        <ul role="list">
+        <ul>
           {navLinks.map(({ href, label }, index) => (
             <li key={href}>
               <a
