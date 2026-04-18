@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './Navbar.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -11,8 +11,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Move focus into menu when opened; return focus to burger when closed
@@ -32,34 +32,36 @@ const Navbar = () => {
   // Close menu on Escape key — WCAG 1.4.13 / 2.1.2
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && menuOpen) {
+      if (e.key === "Escape" && menuOpen) {
         setMenuOpen(false);
       }
     };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [menuOpen]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   const navLinks = [
-    { href: '#about',      label: 'About' },
-    { href: '#work',       label: 'Work' },
-    { href: '#skills',     label: 'Skills' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#companies',  label: 'Clients' },
-    { href: '#contact',    label: 'Contact' },
+    { href: "#about", label: "About" },
+    { href: "#work", label: "Work" },
+    { href: "#skills", label: "Skills" },
+    { href: "#experience", label: "Experience" },
+    { href: "#companies", label: "Clients" },
+    { href: "#contact", label: "Contact" },
   ];
 
   const handleNavClick = () => setMenuOpen(false);
 
   return (
     // <header> carries the implicit "banner" landmark — role="banner" is not needed
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <nav className="navbar__inner" aria-label="Main navigation">
         <a
           href="#hero"
@@ -67,7 +69,6 @@ const Navbar = () => {
           aria-label="Kamal Pandey — home"
         >
           <img
-            src="/assets/kamal-pandey.jpg"
             className="navbar__logo-kp"
             alt="Kamal Pandey Portfolio Logo"
             aria-hidden="true"
@@ -91,7 +92,7 @@ const Navbar = () => {
         */}
         <a
           href="mailto:kamalpandey.dev@gmail.com"
-          aria-label="Contact Kamal via email — currently available for hire"
+          aria-label="Contact Kamal via email - currently available for hire"
           className="hero__badge navbar__cta"
         >
           <span className="hero__badge-dot" aria-hidden="true"></span>
@@ -125,11 +126,13 @@ const Navbar = () => {
         {/* Mobile menu toggle */}
         <button
           ref={burgerRef}
-          className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
+          className={`navbar__burger ${menuOpen ? "navbar__burger--open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
         >
           <span className="navbar__burger-line"></span>
           <span className="navbar__burger-line"></span>
@@ -145,9 +148,9 @@ const Navbar = () => {
       */}
       <div
         id="mobile-menu"
-        className={`navbar__mobile ${menuOpen ? 'navbar__mobile--open' : ''}`}
+        className={`navbar__mobile ${menuOpen ? "navbar__mobile--open" : ""}`}
         aria-hidden={!menuOpen}
-        {...(!menuOpen ? { inert: '' } : {})}
+        {...(!menuOpen ? { inert: "" } : {})}
         role="dialog"
         aria-label="Navigation menu"
         aria-modal="true"

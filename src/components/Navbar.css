@@ -45,6 +45,7 @@
 }
 
 .navbar__logo-kp {
+  content: url("/public/assets/kamal-pandey.jpg");
   width: auto;
   height: 28px;
   background: var(--color-gold);
@@ -230,14 +231,15 @@
 .navbar__mobile {
   display: none;
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
   right: 0;
   bottom: 0;
   background: var(--color-bg);
-  padding: 5rem 2rem 3rem;
+  padding: 0 2rem;
   transform: translateX(100%);
   z-index: 99;
+  height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -297,5 +299,8 @@
 
   .navbar__mobile {
     display: block;
+  }
+  .navbar__logo-kp {
+    content: url("/public/assets/kplogo3.jpg");
   }
 }
