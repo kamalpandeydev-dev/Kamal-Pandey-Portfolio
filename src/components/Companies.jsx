@@ -25,7 +25,7 @@ const companies = [
     image: '/assets/accenture_logo.png',
   },
   {
-    name: 'Dabur India Limited',
+    name: 'Dabur India Limited (Client)',
     role: 'Senior Web Designer (via Accenture)',
     period: '2013-2018',
     sector: 'FMCG / Consumer Goods',
@@ -36,9 +36,9 @@ const companies = [
     image: '/assets/Dabur_Logo.png',
   },
   {
-    name: 'Oracle',
+    name: 'Oracle (Client)',
     role: 'E-Learning Product Developer (via Infopro India)',
-    period: '2010-2013',
+    period: '2008-2009',
     sector: 'Enterprise Software / Global Technology',
     highlight: "Built SCORM/xAPI e-learning modules for Oracle's global user base",
     initials: 'OR',
@@ -49,7 +49,7 @@ const companies = [
   {
     name: 'Infopro India',
     role: 'E-Learning & Web Developer',
-    period: '2010-2013',
+    period: '2007-2009',
     sector: 'E-Learning / Digital Content Production',
     highlight: 'Developed Oracle Global E-Learning Platform using Articulate Storyline & Captivate',
     initials: 'IP',
